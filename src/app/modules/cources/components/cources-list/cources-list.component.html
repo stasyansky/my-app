@@ -1,1 +1,9 @@
-<p>cources-list works!</p>
+<section class="flex flex-column gap-4 overflow-hidden align-items-center py-2">
+  <app-cource
+    *ngFor="let cource of cources"
+    [cource]="cource"
+    (edit)="editCource($event)"
+    (delete)="deleteCource($event)"
+  ></app-cource>
+  <app-load-more-button></app-load-more-button>
+</section>

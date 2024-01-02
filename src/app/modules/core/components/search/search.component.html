@@ -1,0 +1,17 @@
+<div>
+  <span class="p-input-icon-left">
+    <i class="pi pi-search"></i>
+    <input
+      type="text"
+      pInputText
+      [(ngModel)]="value"
+      placeholder="Поиск"
+      class="w-30rem mr-2"
+    />
+  </span>
+  <p-button
+    label="Поиск"
+    styleClass="p-button-info"
+    (onClick)="onClickSearchBtn()"
+  ></p-button>
+</div>

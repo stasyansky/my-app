@@ -1,1 +1,27 @@
-<p>cource works!</p>
+<p-card>
+  <div class="flex justify-content-between mb-2">
+    <h2 class="w-8">{{cource.title | titlecase}}</h2>
+    <div class="flex align-items-center w-4 justify-content-end">
+      <i class="pi pi-clock mr-2" style="color: #708090"></i>
+      <p class="mr-3">{{getTextTime(cource.duration)}}</p>
+      <i class="pi pi-calendar mr-2" style="color: #708090"></i>
+      <p>{{getDateTextFormat(cource.creationDate)}}</p>
+    </div>
+  </div>
+
+  <div class="flex justify-content-between">
+    <p class="w-8">{{cource.description}}</p>
+    <div class="flex align-items-center w-4 justify-content-end">
+      <i
+        class="pi pi-pencil mr-4 cursor-pointer"
+        style="color: #007CFF"
+        (click)="edit.emit(cource)"
+      ></i>
+      <i
+        class="pi pi-trash mr-2 cursor-pointer"
+        style="color: #FF2D00"
+        (click)="delete.emit(cource)"
+      ></i>
+    </div>
+  </div>
+</p-card>
