@@ -1,0 +1,10 @@
+:host ::ng-deep .topRated {
+  .p-card {
+    background-color: lightblue;
+    h2:after {
+      content: "\2605";
+      margin-left: 5px;
+      color: yellow;
+    }
+  }
+}

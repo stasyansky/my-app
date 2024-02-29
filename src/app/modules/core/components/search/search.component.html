@@ -4,7 +4,8 @@
     <input
       type="text"
       pInputText
-      [(ngModel)]="value"
+      [ngModel]="value"
+      (ngModelChange)="onSearchValueChange($event)"
       placeholder="Поиск"
       class="w-30rem mr-2"
     />
@@ -12,6 +13,6 @@
   <p-button
     label="Поиск"
     styleClass="p-button-info"
-    (onClick)="onClickSearchBtn()"
+    (click)="onSearch()"
   ></p-button>
 </div>
