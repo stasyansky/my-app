@@ -6,7 +6,6 @@ import {FooterComponent} from './components/footer/footer.component';
 import {BreadcrumbsComponent} from './components/breadcrumbs/breadcrumbs.component';
 import {SearchComponent} from './components/search/search.component';
 import {AddButtonComponent} from './components/add-button/add-button.component';
-import {LoadMoreButtonComponent} from './components/load-more-button/load-more-button.component';
 import {BreadcrumbModule} from "primeng/breadcrumb";
 import {FormsModule} from "@angular/forms";
 import {InputTextModule} from "primeng/inputtext";
@@ -20,17 +19,15 @@ import {ButtonModule} from "primeng/button";
     FooterComponent,
     BreadcrumbsComponent,
     SearchComponent,
-    AddButtonComponent,
-    LoadMoreButtonComponent
+    AddButtonComponent
   ],
-    exports: [
-        HeaderComponent,
-        FooterComponent,
-        BreadcrumbsComponent,
-        SearchComponent,
-        AddButtonComponent,
-        LoadMoreButtonComponent
-    ],
+  exports: [
+    HeaderComponent,
+    FooterComponent,
+    BreadcrumbsComponent,
+    AddButtonComponent,
+    SearchComponent
+  ],
   imports: [
     CommonModule,
     BreadcrumbModule,

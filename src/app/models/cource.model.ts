@@ -3,5 +3,6 @@ export interface ICource {
   title: string,
   creationDate: string,
   duration: number,
-  description: string
+  description: string,
+  topRated: boolean,
 }

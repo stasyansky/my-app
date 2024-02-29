@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {MenuItem} from "primeng/api";
 
 @Component({
@@ -6,12 +6,13 @@ import {MenuItem} from "primeng/api";
   templateUrl: './breadcrumbs.component.html',
   styleUrls: ['./breadcrumbs.component.scss']
 })
+
 export class BreadcrumbsComponent implements OnInit {
-  public items: MenuItem[] = [];
-  public home: MenuItem = {} as MenuItem;
+  @Input() items: MenuItem[] = [];
+  @Input() homeIcon: MenuItem = {} as MenuItem;
 
   ngOnInit() {
-    this.items = [{ label: 'Курсы' }];
-    this.home = { icon: 'pi pi-home' };
+    this.items = [{label: 'Курсы'}];
+    this.homeIcon = {icon: 'pi pi-home'};
   }
 }

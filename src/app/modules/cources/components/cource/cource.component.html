@@ -1,11 +1,16 @@
-<p-card>
+<p-card
+  [appBorderColor]="cource.creationDate"
+  [ngClass]="{'topRated': cource.topRated}"
+>
   <div class="flex justify-content-between mb-2">
-    <h2 class="w-8">{{cource.title | titlecase}}</h2>
+    <h2 class="w-8">
+      {{cource.title | uppercase}}
+    </h2>
     <div class="flex align-items-center w-4 justify-content-end">
       <i class="pi pi-clock mr-2" style="color: #708090"></i>
-      <p class="mr-3">{{getTextTime(cource.duration)}}</p>
+      <p class="mr-3">{{cource.duration | durationCource}}</p>
       <i class="pi pi-calendar mr-2" style="color: #708090"></i>
-      <p>{{getDateTextFormat(cource.creationDate)}}</p>
+      <p>{{cource.creationDate | date : 'longDate'}}</p>
     </div>
   </div>
 
